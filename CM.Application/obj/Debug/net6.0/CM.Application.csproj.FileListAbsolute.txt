@@ -1,0 +1,15 @@
+D:\ESGI\design-pattern\CM\CM.Application\bin\Debug\net6.0\CM.Application.deps.json
+D:\ESGI\design-pattern\CM\CM.Application\bin\Debug\net6.0\CM.Application.dll
+D:\ESGI\design-pattern\CM\CM.Application\bin\Debug\net6.0\CM.Application.pdb
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.csproj.AssemblyReference.cache
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.AssemblyInfoInputs.cache
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.AssemblyInfo.cs
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.csproj.CoreCompileInputs.cache
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.dll
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\refint\CM.Application.dll
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.pdb
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\ref\CM.Application.dll
+D:\ESGI\design-pattern\CM\CM.Application\bin\Debug\net6.0\CM.Infrastructure.dll
+D:\ESGI\design-pattern\CM\CM.Application\bin\Debug\net6.0\CM.Infrastructure.pdb
+D:\ESGI\design-pattern\CM\CM.Application\obj\Debug\net6.0\CM.Application.csproj.CopyComplete

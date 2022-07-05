@@ -1,0 +1,12 @@
+D:\ESGI\design-pattern\CM\CM.Application.Description\bin\Debug\net6.0\CM.Application.Description.deps.json
+D:\ESGI\design-pattern\CM\CM.Application.Description\bin\Debug\net6.0\CM.Application.Description.dll
+D:\ESGI\design-pattern\CM\CM.Application.Description\bin\Debug\net6.0\CM.Application.Description.pdb
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.csproj.AssemblyReference.cache
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.GeneratedMSBuildEditorConfig.editorconfig
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.AssemblyInfoInputs.cache
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.AssemblyInfo.cs
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.csproj.CoreCompileInputs.cache
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.dll
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\refint\CM.Application.Description.dll
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\CM.Application.Description.pdb
+D:\ESGI\design-pattern\CM\CM.Application.Description\obj\Debug\net6.0\ref\CM.Application.Description.dll
