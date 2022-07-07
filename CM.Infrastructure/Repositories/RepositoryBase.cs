@@ -36,7 +36,7 @@ public class RepositoryBase<TEntity>
         return await GetAll().Where(specs.ToExpression()).ToListAsync();
     }
 
-    public async Task<TEntity?> GetSingleBySpecs(Specification<TEntity> specs)
+    public async Task<TEntity?> GetSingleBySpecsAsync(Specification<TEntity> specs)
     {
         return await GetAll().Where(specs.ToExpression()).SingleOrDefaultAsync();
     }

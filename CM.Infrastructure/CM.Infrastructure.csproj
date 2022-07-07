@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\Specifications\" />
+    <Folder Include="Repositories\Decorators\" />
   </ItemGroup>
 
 </Project>

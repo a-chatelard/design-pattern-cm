@@ -1,14 +1,23 @@
 ﻿using CM.Infrastructure.Entities.Contracts;
+using CM.Infrastructure.Entities.DTO;
 
 namespace CM.Application.Contracts.Builders
 {
     public interface IContractBuilder
     {
-        void setGeneralInformations(string title, string description, TimeSpan weeklyWorkTime, DateTime startDate);
+        void Reset();
 
-        void setType(ContractType type);
+        void SetGeneralInformations(TimeSpan weeklyWorkTime, DateTime startDate);
 
-        void setTeleworkingAddress();
+        void SetType();
+
+        void SetTeleworkingAddress(Address address);
+
+        void SetEndDate(DateTime? endDate);
+
+        void SetDailyRate(double dailyRate);
+
+        Contract GetContract();
     }
 }
 

@@ -19,7 +19,6 @@ public static class DatabaseModule
             });
 
         services
-            .AddScoped<IUserRepository, UserRepository>()
             .AddScoped<IContractRepository, ContractRepository>();
             
         return services;

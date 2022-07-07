@@ -21,14 +21,20 @@ public class ContractRepository : RepositoryBase<Contract>, IContractRepository
         return await GetAllBySpecsAsync(specs);
     }
 
+    public async Task<List<Contract>> GetAllContracts()
+    {
+        return await GetAll().ToListAsync();
+    }
+
     public async Task<Contract?> GetContractBySpecs(Specification<Contract> specs)
     {
-        return await GetSingleBySpecs(specs);
+        return await GetSingleBySpecsAsync(specs);
     }
 
     public async Task<Contract?> GetContractById(Guid contractId)
     {
-        return await GetAll().Include(c => c.User).SingleOrDefaultAsync(c => c.Id == contractId);
+        return await GetAll()
+            .SingleOrDefaultAsync(c => c.Id == contractId);
     }
 
     public async Task UpdateContract(Contract contract)

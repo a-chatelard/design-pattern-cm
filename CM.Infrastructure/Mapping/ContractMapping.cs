@@ -13,10 +13,6 @@ public class ContractMapping : BaseConfiguration<Contract, Guid>
     {
         builder.Property(c => c.State).HasConversion<ContractStateConverter>();
 
-        builder.HasOne(c => c.User).WithMany(u => u.Contracts).HasForeignKey(c => c.UserId);
-
-        builder.HasOne(c => c.Company).WithMany(c => c.Contracts).HasForeignKey(c => c.CompanyId);
-
         builder.Property(c => c.TeleworkingAddress).HasConversion(
             a => JsonConvert.SerializeObject(a),
             a => JsonConvert.DeserializeObject<Address>(a));

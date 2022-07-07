@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Users\**" />
-    <EmbeddedResource Remove="Users\**" />
-    <None Remove="Users\**" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CM.API.Models\CM.API.Models.csproj" />
     <ProjectReference Include="..\CM.Infrastructure\CM.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Users\CreateUser\" />
   </ItemGroup>
 
 </Project>

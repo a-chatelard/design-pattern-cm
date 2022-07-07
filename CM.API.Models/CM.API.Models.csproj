@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Users\**" />
-    <EmbeddedResource Remove="Users\**" />
-    <None Remove="Users\**" />
+    <ProjectReference Include="..\CM.Infrastructure\CM.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
