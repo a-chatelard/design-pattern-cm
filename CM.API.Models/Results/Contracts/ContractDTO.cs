@@ -4,6 +4,7 @@ namespace CM.API.Models.Results.Contracts
 {
     public class ContractDTO
     {
+        public Guid Id { get; }
         public string Title { get; }
         public string Description { get; }
         public double DailyRate { get; }
@@ -16,6 +17,7 @@ namespace CM.API.Models.Results.Contracts
 
         public ContractDTO(Contract contract)
         {
+            Id = contract.Id;
             Title = contract.Title;
             Description = contract.Description;
             DailyRate = contract.DailyRate;

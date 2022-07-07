@@ -33,8 +33,10 @@ public class ContractRepository : RepositoryBase<Contract>, IContractRepository
 
     public async Task<Contract?> GetContractById(Guid contractId)
     {
-        return await GetAll()
+        var contract = await GetAll()
             .SingleOrDefaultAsync(c => c.Id == contractId);
+        contract?.State.SetContract(contract);
+        return contract;
     }
 
     public async Task UpdateContract(Contract contract)

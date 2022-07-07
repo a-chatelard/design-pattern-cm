@@ -23,6 +23,21 @@ namespace CM.Application.Contracts.GetAllContracts
             {
                 filterDecorator = new TypeFilterDecorator(filterDecorator, request.ContractTypeFilter.Value);
             }
+
+            if (request.DailyRateFilter.HasValue)
+            {
+                if (request.DailyRateComparatorFilter.HasValue)
+                {
+                    filterDecorator = new DailyRateComparatorFilterDecorator(filterDecorator,
+                        request.DailyRateComparatorFilter.Value, request.DailyRateFilter.Value);
+                }
+                else
+                {
+                    filterDecorator = new DailyRateFilterDecorator(filter, request.DailyRateFilter.Value);
+                }
+
+            }
+
             var result = await _contractRepository.GetContractsBySpecs(filterDecorator.ApplySpecs());
 
             return result.Select(c => new ContractDTO(c));

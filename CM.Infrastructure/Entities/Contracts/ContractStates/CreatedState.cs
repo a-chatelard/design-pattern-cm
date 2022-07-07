@@ -1,6 +1,7 @@
-﻿using CM.Infrastructure.Exceptions;
+﻿using CM.Infrastructure.Entities.ContractStates;
+using CM.Infrastructure.Exceptions;
 
-namespace CM.Infrastructure.Entities.ContractStates;
+namespace CM.Infrastructure.Entities.Contracts.ContractStates;
 
 public class CreatedState : ContractState
 {

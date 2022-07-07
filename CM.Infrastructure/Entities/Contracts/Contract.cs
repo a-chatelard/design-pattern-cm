@@ -1,4 +1,5 @@
 ﻿using CM.Infrastructure.Entities.Base;
+using CM.Infrastructure.Entities.Contracts.ContractStates;
 using CM.Infrastructure.Entities.ContractStates;
 using CM.Infrastructure.Entities.DTO;
 

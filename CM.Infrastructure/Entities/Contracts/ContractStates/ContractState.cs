@@ -1,4 +1,5 @@
 ﻿using CM.Infrastructure.Entities.Contracts;
+using CM.Infrastructure.Entities.Contracts.ContractStates;
 
 namespace CM.Infrastructure.Entities.ContractStates;
 
@@ -9,6 +10,11 @@ public abstract class ContractState
     protected ContractState()
     {
 
+    }
+
+    public void SetContract(Contract contract)
+    {
+        Contract = contract;
     }
 
     public abstract void Sign();

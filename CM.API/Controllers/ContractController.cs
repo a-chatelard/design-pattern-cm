@@ -4,6 +4,7 @@ using CM.Application.Contracts.CreateContract;
 using CM.Application.Contracts.DeleteContract;
 using CM.Application.Contracts.GetAllContracts;
 using CM.Application.Contracts.GetContractDetails;
+using CM.Infrastructure.Entities.ContractStates;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -58,5 +59,15 @@ public class ContractController : ControllerBase
         await _mediator.Send(command);
 
         return Ok();
+    }
+
+    [HttpPatch("{contractId:guid}")]
+    public async Task<ActionResult<ContractDTO>> UpdateContractState(Guid contractId, [FromBody] string state)
+    {
+        var command = new UpdateContractStateCommand(contractId, state);
+
+        var result = await _mediator.Send(command);
+
+        return Ok(result);
     }
 }
