@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CM.API.Controllers;
+﻿using CM.API.Controllers;
 using CM.API.Models.Results.Contracts;
 using CM.Application.Exceptions;
 using CM.Infrastructure.Entities.Contracts;

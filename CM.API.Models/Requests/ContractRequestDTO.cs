@@ -2,15 +2,15 @@
 {
     public class ContractRequestDTO
     {
-        public TimeSpan DaiyWorkTime { get; set; }
+        public TimeSpan DailyWorkTime { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public double DailyRate { get; set; }
         public AddressRequestDTO Address { get; set; }
 
-        public ContractRequestDTO(TimeSpan daiyWorkTime, DateTime startDate, DateTime? endDate, double dailyRate, AddressRequestDTO address)
+        public ContractRequestDTO(TimeSpan dailyWorkTime, DateTime startDate, DateTime? endDate, double dailyRate, AddressRequestDTO address)
         {
-            DaiyWorkTime = daiyWorkTime;
+            DailyWorkTime = dailyWorkTime;
             StartDate = startDate;
             EndDate = endDate;
             DailyRate = dailyRate;

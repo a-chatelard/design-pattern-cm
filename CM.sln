@@ -15,7 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastruture", "Infrastruture", "{AB71DC8B-6FE8-4D0B-A42D-D2EB4569F6A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM.API.Models", "CM.API.Models\CM.API.Models.csproj", "{CC37B3E9-B872-4AD6-93D6-29E8570CDC77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CM.API.Models", "CM.API.Models\CM.API.Models.csproj", "{CC37B3E9-B872-4AD6-93D6-29E8570CDC77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution elements", "Solution elements", "{0F51E42F-E984-4606-99C4-35B14BC622AC}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

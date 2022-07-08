@@ -1,7 +1,9 @@
+using System.Reflection;
 using CM.API.Controllers.Converters;
 using CM.API.Modules;
 using CM.Application;
 using MediatR;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,8 @@ builder.Services.AddControllers()
     options.JsonSerializerOptions.Converters.Add(new TimeSpanToStringConverter()));
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(AddSwaggerDocumentation);
+
 
 builder.Services.AddMediatR(typeof(ApplicationEntryPoint).Assembly);
 
@@ -35,3 +38,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+static void AddSwaggerDocumentation(SwaggerGenOptions o)
+{
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    o.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+}

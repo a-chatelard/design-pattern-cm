@@ -17,7 +17,7 @@ namespace CM.Application.Contracts.CreateContract
         public CreateContractCommand(string contractType, ContractRequestDTO dto)
         {
             ContractType = contractType;
-            DailyWorkTime = dto.DaiyWorkTime;
+            DailyWorkTime = dto.DailyWorkTime;
             StartDate = dto.StartDate;
             EndDate = dto.EndDate;
             DailyRate = dto.DailyRate;

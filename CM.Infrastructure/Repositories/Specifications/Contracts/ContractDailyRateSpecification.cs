@@ -14,7 +14,7 @@ namespace CM.Infrastructure.Repositories.Specifications.Contracts
 
         public override Expression<Func<Contract, bool>> ToExpression()
         {
-            return c => c.DailyRate > _dailyRate;
+            return c => c.DailyRate == _dailyRate;
         }
     }
 }
