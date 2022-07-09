@@ -1,15 +1,15 @@
 # Design pattern en C# - ESGI AL 2021-2022
 
 Sommaire :
-- La solution Contract Manager
-- Documentation technique
-- Documentation fonctionnelle
-- Utilisation de l'API
-- Design patterns et explications
-  + Builder
-  + Singleton
-  + State
-  + Decorator - Specification
+- [Contract Manager]
+- [Documentation technique]
+- [Documentation fonctionnelle]
+- [Utilisation de l'API]
+- [Design patterns et explications]
+  + [Builder]
+  + [Singleton]
+  + [State]
+  + [Decorator - Specification]
 
 ## Contract Manager
 
@@ -34,6 +34,16 @@ La solution est découpée en trois couches :
 - __Présentation__ (*CM.API* / *CM.API.Models*) comprenant la partie configuration de l'API et controlleurs ainsi que les différents objets qu'elle retourne.
 - __Application__ (*CM.Application*) comprenant nos différents services.
 - __Infrastructure__ (*CM.Infrastructure*) comprenant les configurations liées à la base de données telles que les entités, les repositories, le mapping vers la base de données ou les migrations EntityFramework.
+
+L'API s'appuie sur l'implémentation du CQRS via Mediator afin de gérer les requêtes qu'elle reçoit.
+Les requêtes sont reçus dans les endpoints présents dans la partie présentation (CM.API), 
+ces requêtes HTTP sont transformées en requête de type "Command" ou "Query" selon l'action souhaitée. \
+Une requête de type "Command" représente un requête dont l'objectif est de créer, modifier ou supprimer une entité dans la base de données. \
+Une requête de type "Query" quant à elle représente un requête simple de lecture dans la base de données.
+
+Ces requêtes sont envoyés dans un bus géré par Mediator qui va les envoyer vers le handler correspondant. \
+Un handler gère un seul type de requête et peut, ou non, retourner un objet. \
+Si un résultat est retourné, ce dernier est récupéré au niveau de l'API puis retourné.
 
 L'utilisation d'une base de données locale est optionel. Par défaut, l'API s'appuiera sur une base de données In Memory et ne nécessite donc pas de base de données locale. 
 Pour modifier ce paramètre, il est nécessaire d'aller modifier la variable "useInMemoryDatabase" dans le fichier CM.API.Modules.DatabaseModule :
@@ -115,7 +125,7 @@ Plusieurs endpoints sont mis à disposition :
     + L'état vers lequel le contrat doit être passé => Valeurs accéptées : 'close' / 'deny' / 'send' / 'sign'.
 
 
-## Design patterns mis en place et explications
+## Design patterns et explications
 
 Quatre design patterns ont été mis en place au sein de cette solution. Je vais détailler l'implémentation et mon choix pour chacun d'entre eux.
 
@@ -168,4 +178,6 @@ Le pattern spécification permet d'implémenter des méthodes représentant un s
 
 Le pattern Décorateur permet donc d'exposer des décorateurs qui sont chacun lié à une spécification et de pouvoir accumuler ces décorateurs afin d'en obtenir un ensemble représentant notre filtre.
 
-Ces filtres se basent sur la classe *BaseFilterComponent* représentant un filtre "vide", ne comprenant aucune condition et peut être encapsuler par d'autre Décorateur.
+Ces filtres se basent sur la classe *BaseFilterComponent* représentant un filtre "vide", ne comprenant aucune condition et qui peut être encapsuler par d'autre Décorateur.
+
+Après implémentation du pattern decorator pour la création de filtre, je me suis rendu compte que l'utilisation d'un design pattern type builder aurait peut-être été plus adapté.
